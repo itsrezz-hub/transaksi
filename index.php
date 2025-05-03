@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Manajemen Transaksi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/theme_updated.css" />
 </head>
 <body>
+    <?php include '../includes/navbar.php'; ?>
     <div class="container">
         <h2>Data Transaksi</h2>
         <div class="add-data">
-            <a href="add.php">Tambah Data</a>
+            <a href="add.php" class="btn btn-primary">Tambah Data</a>
         </div>
         <table>
             <thead>
@@ -38,8 +39,8 @@
                         echo "<td>".$row["metode_pembayaran"]."</td>";
                         echo "<td>".number_format($row["total_harga"])."</td>";
                         echo "<td>
-                                <a href='edit.php?id_transaksi=".$row["id_transaksi"]."'>Edit</a>
-                                <a href='delete.php?id_transaksi=".$row["id_transaksi"]."'>Hapus</a>
+                                <a href='edit.php?id_transaksi=".$row["id_transaksi"]."' class='btn btn-warning btn-sm'>Edit</a>
+                                <a href='delete.php?id_transaksi=".$row["id_transaksi"]."' class='btn btn-danger btn-sm'>Hapus</a>
                             </td>";
                         echo "</tr>";
                     }
@@ -51,5 +52,6 @@
             </tbody>
         </table>
     </div>
+    <footer>Copyright 2025, Kelompok 2</footer>
 </body>
 </html>
